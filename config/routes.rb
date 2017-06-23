@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
   devise_for :admins
-  get '/' => "application#whatisup"
+  get '/' => 'admins#index'
+
+  get "/" => "beds#index"
+
 end
