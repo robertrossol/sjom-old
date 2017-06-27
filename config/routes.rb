@@ -1,19 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'residents/index'
+  get '/residents' => 'residents#index'
+  get '/residents/new' => 'residents#new'
+  post '/residents' => 'residents#create'
+  get '/residents/:id' => 'residents#show'
+  get '/residents/:id/edit' => 'residents#edit'
+  patch '/residents/:id' => 'residents#update'
+  delete '/residents/:id' => 'residents#destroy'
 
-  get 'residents/new'
-
-  get 'residents/create'
-
-  get 'residents/show'
-
-  get 'residents/edit'
-
-  get 'residents/update'
-
-  get 'residents/destroy'
-
+  
   devise_for :admins
   get '/' => 'admins#index'
 
