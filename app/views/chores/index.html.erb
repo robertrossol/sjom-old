@@ -1,0 +1,12 @@
+<h1>Chores</h1>
+
+<% @chores.each do |chore| %>
+  <ul>
+  <li><%= chore.task %></li>
+  <%= form_tag "/chores/#{chore.id}", method: :delete do %>
+  <input type="submit" value="Delete Task">
+  <% end %>
+  </ul>
+<% end %>
+
+<button><a href="/chores/new">Add Chore</a></button>
