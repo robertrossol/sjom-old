@@ -5,4 +5,9 @@ Rails.application.routes.draw do
 
   get "/" => "beds#index"
 
+  get "/chores" => "chores#index"
+  get "/chores/new" => "chores#new"
+  post "/chores" => "chores#create"
+  delete "chores/:id" => "chores#destroy"
+
 end
