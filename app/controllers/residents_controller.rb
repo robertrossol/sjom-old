@@ -15,9 +15,8 @@ class ResidentsController < ApplicationController
       bed_id: params[:bed_id],
       date_admitted: params[:date_admitted],
       date_released: params[:date_released],
-      word_shift: params[:word_shift],
+      work_shift: params[:work_shift],
       status: params[:status]
-
       )
   end
 
