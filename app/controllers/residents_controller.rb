@@ -3,9 +3,22 @@ class ResidentsController < ApplicationController
   end
 
   def new
+    
+    render 'new.html.erb'
   end
 
   def create
+    resident = Resident.create(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      gender: params[:gender],
+      bed_id: params[:bed_id],
+      date_admitted: params[:date_admitted],
+      date_released: params[:date_released],
+      word_shift: params[:word_shift],
+      status: params[:status]
+
+      )
   end
 
   def show
