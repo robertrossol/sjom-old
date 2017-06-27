@@ -2,20 +2,17 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
+  
 development:
   <<: *default
   database: san-jose-obrero-mission_development
-  config.eager_load: false
 
 test:
   <<: *default
   database: san-jose-obrero-mission_test
-  config.eager_load: false
 
 production:
   <<: *default
   database: san-jose-obrero-mission_production
   username: san-jose-obrero-mission
   password: <%= ENV['SAN-JOSE-OBRERO-MISSION_DATABASE_PASSWORD'] %>
-  config.eager_load: true
