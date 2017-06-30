@@ -7,6 +7,11 @@ development:
   <<: *default
   database: san-jose-obrero-mission_development
 
+qa:
+  <<: *default
+  url: postgres://iqhevfghbhspfa:fab10480d71b037415c6873a2670ef44755aa63b5f4809b72355d3c25c2fecb5@ec2-107-20-186-238.compute-1.amazonaws.com:5432/d7mv76ia4c9o90
+  database: san-jose-obrero-mission_development
+
 test:
   <<: *default
   database: san-jose-obrero-mission_test
