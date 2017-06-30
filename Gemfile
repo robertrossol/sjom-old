@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 
 group :development, :test do
+  gem 'listen'
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.6.0'
   gem 'rails-controller-testing'
