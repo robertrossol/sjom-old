@@ -53,4 +53,17 @@ ActiveRecord::Schema.define(version: 20170630000801) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "residents", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "gender"
+    t.string   "bed_id"
+    t.date     "date_admitted"
+    t.date     "date_released"
+    t.string   "work_shift"
+    t.string   "status"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
 end
