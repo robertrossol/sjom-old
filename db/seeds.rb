@@ -1,3 +1,8 @@
+Bed.delete_all()
+Building.delete_all()
+Floor.delete_all()
+Room.delete_all()
+
 buildings = ["Loomis", "Casa De Sol"]
   
 buildings.each do |building|
