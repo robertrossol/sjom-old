@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe ChoresController, type: :controller do
   describe "#index" do
     it "tests to make sure users view chores index page" do
+      sign_in FactoryGirl.create :admin
       get :index
       expect(response).to render_template(:index)
     end    
