@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   post "/chores" => "chores#create"
   delete "chores/:id" => "chores#destroy"
 
+  get "/discipline" => "disciplinary_actions#new"
+  post "/discipline" => "disciplinary_actions#create"
+
 end
