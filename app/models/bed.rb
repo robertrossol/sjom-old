@@ -1,4 +1,4 @@
 class Bed < ApplicationRecord
-  belongs_to :resident
-  belongs_to :room
+  belongs_to :room, optional: true
+  has_one :resident
 end

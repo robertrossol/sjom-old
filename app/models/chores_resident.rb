@@ -1,4 +1,4 @@
 class ChoresResident < ApplicationRecord
+  belongs_to :resident
   belongs_to :chore
-  has_one :resident
 end

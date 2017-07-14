@@ -3,6 +3,13 @@ Building.delete_all()
 Floor.delete_all()
 Room.delete_all()
 
+connection = ActiveRecord::Base.connection()
+connection.execute('ALTER SEQUENCE buildings_id_seq RESTART WITH 1')
+connection.execute('ALTER SEQUENCE rooms_id_seq RESTART WITH 1')
+connection.execute('ALTER SEQUENCE floors_id_seq RESTART WITH 1')
+connection.execute('ALTER SEQUENCE beds_id_seq RESTART WITH 1')
+
+
 buildings = ["Loomis", "Casa De Sol"]
   
 buildings.each do |building|
@@ -47,13 +54,13 @@ room_beds.each do |room, beds|
       room_id: Room.find_by(name: room).id,
       bed_number: bed,
       top_bottom: "top",
-      occupied: "true"
+      occupied: true
       )
     Bed.create(
       room_id: Room.find_by(name: room).id,
       bed_number: bed,
       top_bottom: "bottom",
-      occupied: "false"
+      occupied: false
 
       )
   end
